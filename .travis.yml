@@ -6,8 +6,9 @@ services:
   - postgresql
 
 env:
-  - DATABASE_URL=postgres://postgres@localhost:5431/travis_test
-  - RAILS_ENV:test
+  global:
+    - DATABASE_URL=postgres://postgres@localhost:5431/travis_test
+    - RAILS_ENV=test
 
 include:
 - os: linux
